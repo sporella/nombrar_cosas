@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Nombrar Cosas</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Stephanie Orellana" />
+    <meta name="date" content="2021-02-19" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Nombrar Cosas
+## Inspirada en <a href="http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf">Naming Things</a> de Jenny Bryan
+### Stephanie Orellana
+### 2021-02-19
+
+---
+
+
+
+
+
+
+class: inverse
+
+.purple_h1[Malos Nombres]
+
+.pull-left[
+`Introducción final dic doc.pdf` 
+
+`modelo.xlsx` 
+
+`figura I.png` 
+]
+
+--
+
+.pull-left[
+`Introducción final dic doc-2.pdf` 
+
+`Datos contacto@gatos.cl.txt` 
+
+`W.docx` 
+]
+--
+
+.purple_h1[¿Cómo escribir buenos nombres?]
+
+
+---
+class: middle 
+# Tres principios 3️⃣
+
+
+--
+
+
+## Leíbles para el computador
+
+--
+
+## Leíbles para los humanos
+
+--
+
+## Funcionen bien con orden por defecto
+
+
+
+---
+class: middle
+
+# Para el computador 💻
+
+--
+
+- Expresiones regulares y palabras clave
+  - Sin caracteres especiales
+  - Sin signos de puntuación
+
+--
+
+- Fácil de programar
+  - Uso deliberado de los separadores (permite extraer metadatos desde el nombre de los archivos)
+  - Usar "_" para separar metadatos
+  - Usar "-" para separar nombres con más de una palabra
+  
+---
+class: inverse
+# Para el computador 💻
+
+--
+- Es más fácil para buscar archivos más tarde
+
+--
+- Es más fácil seleccionar grupos más pequeños a partir de los nombres
+
+--
+- Facilita el extraer información desde los nombres de los archivos
+
+--
+- Evitar: ☠️
+  - espacios en los nombres de los archivos
+  - signos de puntuación
+  - caracteres acentuados
+  - diferentes archivos llamados "gato" y "Gato"
+
+---
+class: middle
+# Para humanos 👩 👨
+
+--
+- Fácil de saber qué es lo que contiene el archivo a partir de su nombre
+
+--
+- Usar "slug" (parte del nombre que identifica de qué se trata)
+
+---
+class: inverse
+
+.purple_h1[¿Cuál prefieres si son las 2:45 AM?😱]
+
+.pull-left[
+
+01.docx
+
+02.docx
+
+03.docx
+
+04.docx
+
+05.docx
+
+06.docx
+
+nada.docx
+]
+
+.pull-right[
+
+01_introduccion.docx
+
+02_materiales-metodos.docx
+
+03_discusion.docx
+
+04_conclusion.docx
+
+05_bibliografia.docx
+
+06_modelos-y-tablas.docx
+
+07_sobras-modelos-y-textos.docx
+]
+---
+class: inverse
+
+&lt;img src="img/malos_nombres.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+# Fácil de ordenar 📂
+
+- Fácil de ordenar por defecto:
+
+--
+
+  - Usar algo numérico al principio
+
+--
+
+  - Usar fechas en formato "ISO 8601" (YYYY-MM-DD)
+
+--
+
+  - Anteponer ceros  
+
+
+---
+
+class: inverse
+
+&lt;img src="img/ceros.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+# Comentarios finales
+
+--
+- Sé considerada contigo misma
+
+--
+-  Fácil de implementar AHORA
+
+--
+
+- La práctica mejora los resultados (sobre todo con proyectos complejos)
+
+--
+- ¡Vamos a usar nombres increíbles! 💪🏼
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
